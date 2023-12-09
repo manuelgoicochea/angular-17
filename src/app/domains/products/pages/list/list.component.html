@@ -1,0 +1,10 @@
+<!--padre-->
+<div class="grid grid-cols-3 gap-8">
+    <app-product title="Product 1" [price]="12" img="https://picsum.photos/640/640?r=23" (addToCard)="fromChild($event)"/>
+    <app-product title="Product 2" [price]="12" img="https://picsum.photos/640/640?r=24" (addToCard)="fromChild($event)" />
+    <app-product title="Product 3" [price]="12" img="https://picsum.photos/640/640?r=25" (addToCard)="fromChild($event)"/>
+    <app-product title="Product 4" [price]="12" img="https://picsum.photos/640/640?r=26" (addToCard)="fromChild($event)"/>
+    <app-product title="Product 5" [price]="12" img="https://picsum.photos/640/640?r=27" (addToCard)="fromChild($event)"/>
+</div>
+
+<!--el padre necesita escuchar  por eso se crea el metodo from child-->
