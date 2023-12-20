@@ -25,7 +25,8 @@
     "paths": {
       //se recomienda crear alias por dominio
       "@shared/*":["./src/app/domains/shared/*"],
-      "@products/*":["./src/app/domains/products/*"]
+      "@products/*":["./src/app/domains/products/*"],
+      "@info/*":["./src/app/domains/info/*"]
     }
   },
   "angularCompilerOptions": {
