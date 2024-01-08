@@ -1,6 +1,8 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '@shared/models/product.model';
 import{CommonModule} from '@angular/common';
+
+import{RouterLinkWithHref} from '@angular/router';
 import { ReversePipe } from "@shared/pipes/reverse.pipe";
 
 import { TimeAgoPipe } from "@shared/pipes/time-ago.pipe";
@@ -10,7 +12,7 @@ import { TimeAgoPipe } from "@shared/pipes/time-ago.pipe";
     standalone: true,
     templateUrl: './product.component.html',
     styleUrl: './product.component.css',
-    imports: [CommonModule, ReversePipe,TimeAgoPipe]
+    imports: [CommonModule, ReversePipe,TimeAgoPipe,RouterLinkWithHref]
 })
 export class ProductComponent {
   //img = 'https://picsum.photos/640/640?r'+Math.random()

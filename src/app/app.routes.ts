@@ -1,17 +1,30 @@
 import { Routes } from '@angular/router';
-import{ListComponent} from '@products/pages/list/list.component';
-import{AboutComponent} from '@info/pages/about/about.component';
+
+import{LayoutComponent} from '@shared/components/layout/layout.component';
 import{NotFoundComponent} from '@info/pages/not-found/not-found.component';
 
 
 export const routes: Routes = [
-    {
+    { 
         path:'',
-        component:ListComponent
-    },
-    {
-        path:'about',
-        component:AboutComponent
+        component:LayoutComponent,
+        children:[
+            {
+                path:'',
+                loadComponent:()=>import('@products/pages/list/list.component')
+            },
+            {
+                path:'about',
+                loadComponent:()=>import('@info/pages/about/about.component')
+            },
+            {
+                path:'product/:id',
+                loadComponent:()=>import('@products/pages/product-detail/product-detail.component')
+               // component:ProductDetailComponent
+            }
+
+        ]
+
     },
     {
         path:'**',
